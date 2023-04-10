@@ -3,6 +3,7 @@ import ReactPlayer from 'react-player'
 
 export default function Home() {
   const [stream, setStream] = useState(null)
+  var test = 'test'
 
   // useEffect(() => {
   //   if (typeof window !== 'undefined') {
