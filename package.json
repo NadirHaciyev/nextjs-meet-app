@@ -7,12 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint-fix": "next lint --fix",
     "prepare": "husky install"
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-tailwindcss": "^3.11.0",
     "next": "13.3.0",
     "postcss": "8.4.21",
@@ -37,10 +39,11 @@
     "prettier-plugin-tailwindcss": "^0.2.7"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "eslint --quiet --cache --fix"
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
     ],
-    "*.{json,js,ts,jsx,tsx,html}": [
+    "*.json": [
       "prettier --write"
     ]
   }

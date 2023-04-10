@@ -1,9 +1,14 @@
-import { useEffect, useState } from 'react'
-import ReactPlayer from 'react-player'
+// import { useState } from "react";
+// import ReactPlayer from "react-player";
 
 export default function Home() {
-  const [stream, setStream] = useState(null)
-  var test = 'test'
+  // const [stream, setStream] = useState(null);
+  const obj = {
+    name: "nadir",
+
+    fullname: "haciyev",
+  };
+  console.log(obj);
 
   // useEffect(() => {
   //   if (typeof window !== 'undefined') {
@@ -25,5 +30,5 @@ export default function Home() {
   return (
     // <>{stream && <ReactPlayer className="!w-screen !h-screen" playing muted url={stream} />}</>
     <div>ad</div>
-  )
+  );
 }

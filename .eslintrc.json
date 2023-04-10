@@ -4,13 +4,7 @@
     "es2021": true,
     "node": true
   },
-  "extends": [
-    "plugin:tailwindcss/recommended",
-    "plugin:react/recommended",
-    "airbnb",
-    "next",
-    "prettier"
-  ],
+  "extends": ["plugin:react/recommended", "airbnb", "airbnb/hooks", "plugin:prettier/recommended", "next"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -20,51 +14,24 @@
   },
   "plugins": ["react", "tailwindcss"],
   "rules": {
+    "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off",
+    "no-restricted-exports": "off",
     "react/jsx-props-no-spreading": "off",
-    "react/destructuring-assignment": "off",
-    "import/no-extraneous-dependencies": "off",
-    "tailwindcss/no-custom-classname": "off",
-    "react/jsx-key": "off",
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".js", ".jsx"]
-      }
-    ],
-    "import/no-named-as-default": 0,
-    // This rule is not compatible with Next.js's <Link /> components
-    "jsx-a11y/anchor-is-valid": [
-      "error",
-      {
-        "components": ["Link"],
-        "specialLink": ["hrefLeft", "hrefRight"],
-        "aspects": ["invalidHref", "preferButton"]
-      }
-    ],
+    "react/require-default-props": "off",
+    "react/prop-types": "off",
+    "camelcase": "off",
+    "react/no-array-index-key": "off",
+    "jsx-a11y/anchor-is-valid": "off",
     "jsx-a11y/click-events-have-key-events": "off",
-    "jsx-a11y/label-has-associated-control": [
-      "error",
-      {
-        "required": {
-          "some": ["nesting", "id"]
-        }
-      }
-    ],
-    "jsx-a11y/label-has-for": [
-      "error",
-      {
-        "required": {
-          "some": ["nesting", "id"]
-        }
-      }
-    ],
-    "max-len": [0, { "code": 120, "ignoreUrls": true }],
-    "jsx-a11y/media-has-caption": "off",
-    "tailwindcss/classnames-order": "off",
-    "no-param-reassign": "off",
-    "import/no-cycle": "error"
+    "jsx-a11y/no-static-element-interactions": "off",
+    "import/no-unresolved": "off",
+    "import/no-cycle": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-no-bind": "off",
+    "prefer-regex-literals": "off",
+    "react/destructuring-assignment": "off",
+    "no-useless-escape": "off"
   },
   "globals": {
     "React": "writable"
